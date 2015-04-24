@@ -9,5 +9,17 @@ namespace Vigil
             : base("ViglDb")
         {
         }
+
+        protected override void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Ignore(new Type[] { typeof(IdentityUser), typeof(IdentityRole), typeof(IdentityUserClaim), typeof(IdentityUserRole), typeof(IdentityUserLogin) });
+            modelBuilder.RegisterEntityType(typeof(VigilUser));
+            modelBuilder.RegisterEntityType(typeof(VigilUserRole));
+            modelBuilder.RegisterEntityType(typeof(VigilUserClaim));
+            modelBuilder.RegisterEntityType(typeof(VigilUserLogin));
+            modelBuilder.RegisterEntityType(typeof(VigilRole));
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
