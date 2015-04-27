@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VigilDataContext", "VigilDataContext\VigilDataContext.csproj", "{D14F25B8-1511-4931-A7F5-5CB9AAFB3559}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VigilDataContext.Tests", "VigilDataContext.Tests\VigilDataContext.Tests.csproj", "{D40BEEE3-AAC7-44A5-BCC3-0DB1D189AD8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D14F25B8-1511-4931-A7F5-5CB9AAFB3559}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D14F25B8-1511-4931-A7F5-5CB9AAFB3559}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D14F25B8-1511-4931-A7F5-5CB9AAFB3559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D40BEEE3-AAC7-44A5-BCC3-0DB1D189AD8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D40BEEE3-AAC7-44A5-BCC3-0DB1D189AD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D40BEEE3-AAC7-44A5-BCC3-0DB1D189AD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D40BEEE3-AAC7-44A5-BCC3-0DB1D189AD8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Vigil
 {
-    public class VigilUserLogin : IdentityUserLogin<int>
+    public class VigilUserLogin : IdentityUserLogin<Guid>
     {
     }
 }

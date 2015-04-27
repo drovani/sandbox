@@ -3,23 +3,23 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Vigil
 {
-    public class VigilDataContext : IdentityDbContext<VigilUser, VigilRole, int, VigilUserLogin, VigilUserRole, VigilUserClaim>
+    public class VigilDataContext : IdentityDbContext<VigilUser, VigilRole, Guid, VigilUserLogin, VigilUserRole, VigilUserClaim>
     {
-        public VigilDataContext()
-            : base("ViglDb")
+        public VigilDataContext() : this("ViglDb") { }
+        public VigilDataContext(string nameOrConnectionString)
+            : base(nameOrConnectionString)
         {
         }
 
         protected override void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)
         {
-            modelBuilder.Ignore(new Type[] { typeof(IdentityUser), typeof(IdentityRole), typeof(IdentityUserClaim), typeof(IdentityUserRole), typeof(IdentityUserLogin) });
-            modelBuilder.RegisterEntityType(typeof(VigilUser));
-            modelBuilder.RegisterEntityType(typeof(VigilUserRole));
-            modelBuilder.RegisterEntityType(typeof(VigilUserClaim));
-            modelBuilder.RegisterEntityType(typeof(VigilUserLogin));
-            modelBuilder.RegisterEntityType(typeof(VigilRole));
-
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<VigilUser>().ToTable(typeof(VigilUser).Name);
+            modelBuilder.Entity<VigilRole>().ToTable(typeof(VigilRole).Name);
+            modelBuilder.Entity<VigilUserLogin>().ToTable(typeof(VigilUserLogin).Name);
+            modelBuilder.Entity<VigilUserRole>().ToTable(typeof(VigilUserRole).Name);
+            modelBuilder.Entity<VigilUserClaim>().ToTable(typeof(VigilUserClaim).Name);
         }
     }
 }
