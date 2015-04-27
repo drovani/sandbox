@@ -13,7 +13,7 @@ namespace Vigil
         
         string IMigrationMetadata.Id
         {
-            get { return "201504242152011_Initial"; }
+            get { return "201504271955385_Initial"; }
         }
         
         string IMigrationMetadata.Source
